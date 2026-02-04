@@ -5,11 +5,10 @@ Battery Management System (BMS) plays an very important role while dealing with 
 This project implements a smart Li-ion Battery Management System using BQ76930.
 
 ## Features
-- 3–10 cells monitoring
+- Capable of monitoring 3–10 cells 
 - Over/under voltage protection
 - Temperature monitoring
 - Passive cell balancing
-- Enabled for I2C communication
 
 ## Imp Hardware Used
 - BQ76930 
@@ -17,19 +16,19 @@ This project implements a smart Li-ion Battery Management System using BQ76930.
 - Shunt resistor
 
 ## Program
-Here I have used ESP32, you can select module of your cjoice but look for the req no of pins. 
-I have written the code for 6 cells(i=6) and have used only one pin for temperature sensing.
-Define your SDA and SCL pins in the code.
-Refer to the datasheet for cell address.
+-Here I have used ESP32, you can select module of your cjoice but look for the req no of pins. 
+-I have written the code for 6 cells(i=6) and have used only one pin for temperature sensing.
+-Define your SDA and SCL pins in the code.
+-Refer to the datasheet for cell address.
 
 ## How to Run
-1. Connect the battery pack
+1. Connect the battery pack 
 2. Note down the values
 3. If using a MCU, than write program as needed
 4. Monitor serial output
 
 ## Applications
-  Widely used in EV vehicles 
+- Widely used in EV vehicles 
 - Adding an microcontroller to it enables cell monitoring 
 - Used in various kind of Robotics Projects 
 
