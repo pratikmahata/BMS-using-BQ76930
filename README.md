@@ -16,7 +16,7 @@ This project implements a smart Li-ion Battery Management System using BQ76930.
 - Shunt resistor
 
 ## Program
-Here I have used ESP32, you can select module of your cjoice but look for the req no of pins. 
+Here I have used ESP32, you can select module of your choice but look for the req no of pins. 
 I have written the code for 6 cells(i=6) and have used only one pin for temperature sensing.
 Define your SDA and SCL pins in the code.
 Refer to the datasheet for cell address.
