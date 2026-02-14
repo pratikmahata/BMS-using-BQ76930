@@ -21,7 +21,7 @@ void setup()
   Serial.begin(115200);
   Wire.begin(SDA_PIN, SCL_PIN);
 
-  Serial.println("=== BMS Monitor Started ===");
+  Serial.println("=== 3S BMS Monitor Started ===");
 }
 
 void loop()
@@ -29,17 +29,14 @@ void loop()
   float pack = 0;
 
   Serial.println("\nCells:");
-  for(int i=0;i<6;i++)
+  for(int i = 0; i < 3; i++)   // for 3s battery pack
   {
-    float v = R(VC_BASE + 2*i) * 0.001;   // mV → V
+    float v = R(VC_BASE + 2*i) * 0.001;   
     pack += v;
-
-    Serial.printf("C%d: %.3fV  ", i+1, v);
+    Serial.printf("C%d: %.3fV  ", i + 1, v);
   }
-  
+
   float t1 = R(TS1) * 0.1 - 273.15;
-
   Serial.printf("\nPack: %.2fV | T1: %.1fC\n", pack, t1);
-
   delay(1000);
 }
